@@ -1,5 +1,8 @@
 package ch.bzz.kartenDeck.model;
 
+import java.lang.*;
+
+
 /**
  * a card publisher
  */
