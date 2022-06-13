@@ -311,12 +311,17 @@ public class Card {
         this.ability = ability;
     }
 
+    /**
+     * gets HashMap
+     * @return
+     */
     public HashMap<String, Card> getCardHashMap() {
         return cardHashMap;
     }
 
     /**
-     *
+     * method to add cards to HashMap
+     * @param card
      */
     public void addCard(Card card){
         if (cardHashMap == null){

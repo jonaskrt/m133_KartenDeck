@@ -87,10 +87,18 @@ public class Deck {
         this.deck = deck;
     }
 
+    /**
+     * gets deckHashMap
+     * @return
+     */
     public HashMap<String, Deck> getDeckHashMap(){
         return deckHashMap;
     }
 
+    /**
+     * method to add Deck to HashMap
+     * @param deck
+     */
     public void addDeckHashMap(Deck deck){
         if(deckHashMap == null){
             deckHashMap = new HashMap<>();
