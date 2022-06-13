@@ -45,6 +45,9 @@ public class Card {
     @Size(min = 1, max = 50, message = "Your Cards ability must be between 1 and 50 characters")
     private String ability;
 
+    @JsonIgnore
+    private HashMap<String,Card> cardHashMap;
+
     /**
      * constructor with all params
      * @param deck
@@ -95,8 +98,6 @@ public class Card {
      * @throws IllegalArgumentException
      */
     public Card(String card, String monstertype, BigDecimal ATK, BigDecimal DEF, String ability) throws IllegalArgumentException{
-        setDeck(deck);
-        setCardUUID(cardUUID);
         setCard(card);
         setMonstertype(monstertype);
         setATK(ATK);
@@ -310,11 +311,18 @@ public class Card {
         this.ability = ability;
     }
 
+    public HashMap<String, Card> getCardHashMap() {
+        return cardHashMap;
+    }
+
     /**
      *
      */
-    public void addDeck(Deck deck){
-        if (deck == null){
+    public void addCard(Card card){
+        if (cardHashMap == null){
+            cardHashMap = new HashMap<>();
         }
+
+        cardHashMap.put(card.getCardUUID(), card);
     }
 }
