@@ -1,0 +1,3545 @@
+{
+	"info": {
+		"_postman_id": "6bc7ee6c-f7d6-4bf7-b0a0-1ee909ae3b9b",
+		"name": "KartenDeck",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Milestone 2",
+			"item": [
+				{
+					"name": "Benutzer: login admin Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "benutzername",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "passwort",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"benutzer",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/test/restore",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"test",
+								"restore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/test/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"test",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test valides JSON",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/testliste",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"testliste"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: check",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.Kartentyp).to.eql(\"777-300ER\");\r",
+									"    pm.expect(responseJson.herstellungsdatum).to.eql(\"2017\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/check?KartenUUID=4efd4ee9-1e3e-47cc-a919-93194c5137cd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"check"
+							],
+							"query": [
+								{
+									"key": "KartenUUID",
+									"value": "4efd4ee9-1e3e-47cc-a919-93194c5137cd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: check empty",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson).to.eql(null);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/check?KartenUUID=a1c0bb34-7f7f-41a3-8960-04487f696bc2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"check"
+							],
+							"query": [
+								{
+									"key": "KartenUUID",
+									"value": "a1c0bb34-7f7f-41a3-8960-04487f696bc2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: check invalid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson).to.eql(null);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/check?KartenUUID=a1c0bb34-7f7f-41a3-04487f696bc2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"check"
+							],
+							"query": [
+								{
+									"key": "KartenUUID",
+									"value": "a1c0bb34-7f7f-41a3-04487f696bc2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline: list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/airline/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"airline",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline: check",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.name).to.eql(\"Swiss\");\r",
+									"    pm.expect(responseJson.gruendungsdatum).to.eql(\"2002\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/airline/check?airlineUUID=1bf5dca5-4f25-4225-aff8-c7b5de868ea1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"airline",
+								"check"
+							],
+							"query": [
+								{
+									"key": "airlineUUID",
+									"value": "1bf5dca5-4f25-4225-aff8-c7b5de868ea1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline: check empty",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson).to.eql(null);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/airline/check?airlineUUID=364cce64-2fc7-4b10-8094-fdc10f45eda8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"airline",
+								"check"
+							],
+							"query": [
+								{
+									"key": "airlineUUID",
+									"value": "364cce64-2fc7-4b10-8094-fdc10f45eda8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline: check invalid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson).to.eql(null);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/airline/check?airlineUUID=364cce64-2fc7-8094-fdc10f45eda8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"airline",
+								"check"
+							],
+							"query": [
+								{
+									"key": "airlineUUID",
+									"value": "364cce64-2fc7-8094-fdc10f45eda8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hersteller: list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/hersteller/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"hersteller",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hersteller: check",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.name).to.eql(\"Airbus\");\r",
+									"    pm.expect(responseJson.gruendungsdatum).to.eql(\"1970\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/hersteller/check?herstellerUUID=1a8b4702-59d8-4a22-927a-0d1c9713bba1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"hersteller",
+								"check"
+							],
+							"query": [
+								{
+									"key": "herstellerUUID",
+									"value": "1a8b4702-59d8-4a22-927a-0d1c9713bba1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hersteller: check empty",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson).to.eql(null);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/hersteller/check?herstellerUUID=ed79fa21-4a43-4b85-ba58-18a1e74af0df",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"hersteller",
+								"check"
+							],
+							"query": [
+								{
+									"key": "herstellerUUID",
+									"value": "ed79fa21-4a43-4b85-ba58-18a1e74af0df"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hersteller: check invalid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson).to.eql(null);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/hersteller/check?herstellerUUID=ed79-fa21-4a43-4b85-ba58-18a1e74af0df",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"hersteller",
+								"check"
+							],
+							"query": [
+								{
+									"key": "herstellerUUID",
+									"value": "ed79-fa21-4a43-4b85-ba58-18a1e74af0df"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Milestone 2",
+			"item": [
+				{
+					"name": "Karten: insert",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "herstellerUUID",
+									"value": "1a8b4702-59d8-4a22-927a-0d1c9713bba1",
+									"type": "text"
+								},
+								{
+									"key": "airlineUUID",
+									"value": "1bf5dca5-4f25-4225-aff8-c7b5de868ea1",
+									"type": "text"
+								},
+								{
+									"key": "Kartentyp",
+									"value": "A220-300",
+									"type": "text"
+								},
+								{
+									"key": "KartenUUID",
+									"value": "e8ecf099-81ac-48b3-8919-f842f8790537",
+									"type": "text"
+								},
+								{
+									"key": "herstellungsdatum",
+									"value": "2018",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: insert Test",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.Kartentyp).to.eql(\"A220-300\");\r",
+									"    pm.expect(responseJson.herstellungsdatum).to.eql(\"2018\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/check?KartenUUID=e8ecf099-81ac-48b3-8919-f842f8790537",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"check"
+							],
+							"query": [
+								{
+									"key": "KartenUUID",
+									"value": "e8ecf099-81ac-48b3-8919-f842f8790537"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: update komplett",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "alteKartenUUID",
+									"value": "4efd4ee9-1e3e-47cc-a919-93194c5137cd",
+									"type": "text"
+								},
+								{
+									"key": "neueHerstellerUUID",
+									"value": "1a8b4702-59d8-4a22-927a-0d1c9713bba1",
+									"type": "text"
+								},
+								{
+									"key": "Kartentyp",
+									"value": "A350-1000",
+									"type": "text"
+								},
+								{
+									"key": "KartenUUID",
+									"value": "b1e14e73-13e7-4f23-8db1-2e1e11873e54",
+									"type": "text"
+								},
+								{
+									"key": "herstellungsdatum",
+									"value": "2017",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: update Test komplett",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.Kartentyp).to.eql(\"A350-1000\");\r",
+									"    pm.expect(responseJson.herstellungsdatum).to.eql(\"2017\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/check?KartenUUID=b1e14e73-13e7-4f23-8db1-2e1e11873e54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"check"
+							],
+							"query": [
+								{
+									"key": "KartenUUID",
+									"value": "b1e14e73-13e7-4f23-8db1-2e1e11873e54"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: update partiel",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "alteKartenUUID",
+									"value": "b1e14e73-13e7-4f23-8db1-2e1e11873e54",
+									"description": "Boeing 777",
+									"type": "text"
+								},
+								{
+									"key": "Kartentyp",
+									"value": "A350-900",
+									"description": "Airbus",
+									"type": "text"
+								},
+								{
+									"key": "herstellungsdatum",
+									"value": "2020",
+									"description": "Swiss -> Edelweiss",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: update Test partiel",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.Kartentyp).to.eql(\"A350-900\");\r",
+									"    pm.expect(responseJson.herstellungsdatum).to.eql(\"2020\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/check?KartenUUID=b1e14e73-13e7-4f23-8db1-2e1e11873e54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"check"
+							],
+							"query": [
+								{
+									"key": "KartenUUID",
+									"value": "b1e14e73-13e7-4f23-8db1-2e1e11873e54"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: update unknown",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "alteKartenUUID",
+									"value": "eab48827-eff5-4473-a9bd-39ad8466b4c9",
+									"type": "text"
+								},
+								{
+									"key": "neueHerstellerUUID",
+									"value": "1a8b4702-59d8-4a22-927a-0d1c9713bba1",
+									"type": "text"
+								},
+								{
+									"key": "Kartentyp",
+									"value": "A350-1000",
+									"type": "text"
+								},
+								{
+									"key": "KartenUUID",
+									"value": "b1e14e73-13e7-4f23-8db1-2e1e11873e54",
+									"type": "text"
+								},
+								{
+									"key": "herstellungsdatum",
+									"value": "2017",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: update Test unknown",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.Kartentyp).to.eql(\"A350-900\");\r",
+									"    pm.expect(responseJson.herstellungsdatum).to.eql(\"2020\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/check?KartenUUID=b1e14e73-13e7-4f23-8db1-2e1e11873e54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"check"
+							],
+							"query": [
+								{
+									"key": "KartenUUID",
+									"value": "b1e14e73-13e7-4f23-8db1-2e1e11873e54"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: remove",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/delete?KartenUUID=c3effae4-81e2-4a94-b8f3-48f43c998630",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "KartenUUID",
+									"value": "c3effae4-81e2-4a94-b8f3-48f43c998630"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: remove Test",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson).to.eql(null);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/check?KartenUUID=c3effae4-81e2-4a94-b8f3-48f43c998630",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"check"
+							],
+							"query": [
+								{
+									"key": "KartenUUID",
+									"value": "c3effae4-81e2-4a94-b8f3-48f43c998630"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: remove unknown",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/delete?KartenUUID=2799810d-34ff-44d1-a57f-4289853c0555",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "KartenUUID",
+									"value": "2799810d-34ff-44d1-a57f-4289853c0555"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline: insert",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Ryanair",
+									"type": "text"
+								},
+								{
+									"key": "airlineUUID",
+									"value": "277df517-2775-4b2e-bed1-3db89014fcfc",
+									"type": "text"
+								},
+								{
+									"key": "gruendungsdatum",
+									"value": "1985",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/airline/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"airline",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline: update komplett",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "alteAirlineUUID",
+									"value": "1bf5dca5-4f25-4225-aff8-c7b5de868ea1",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Swiss 2.0",
+									"type": "text"
+								},
+								{
+									"key": "airlineUUID",
+									"value": "5b7222f1-1fdb-46f3-b53b-2c3f740d1b2c",
+									"type": "text"
+								},
+								{
+									"key": "gruendungsdatum",
+									"value": "2021",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/airline/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"airline",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline: update Test komplett",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.name).to.eql(\"Swiss 2.0\");\r",
+									"    pm.expect(responseJson.gruendungsdatum).to.eql(\"2021\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/airline/check?airlineUUID=5b7222f1-1fdb-46f3-b53b-2c3f740d1b2c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"airline",
+								"check"
+							],
+							"query": [
+								{
+									"key": "airlineUUID",
+									"value": "5b7222f1-1fdb-46f3-b53b-2c3f740d1b2c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline: update partiel",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "alteAirlineUUID",
+									"value": "5b7222f1-1fdb-46f3-b53b-2c3f740d1b2c",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Swiss 3.0",
+									"type": "text"
+								},
+								{
+									"key": "gruendungsdatum",
+									"value": "2025",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/airline/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"airline",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline: update Test partiel",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.name).to.eql(\"Swiss 3.0\");\r",
+									"    pm.expect(responseJson.gruendungsdatum).to.eql(\"2025\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/airline/check?airlineUUID=5b7222f1-1fdb-46f3-b53b-2c3f740d1b2c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"airline",
+								"check"
+							],
+							"query": [
+								{
+									"key": "airlineUUID",
+									"value": "5b7222f1-1fdb-46f3-b53b-2c3f740d1b2c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline: update unknown",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "alteAirlineUUID",
+									"value": "a325c2ac-83cd-436f-bd1d-22e8d2c2d0b3",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Swiss 2.0",
+									"type": "text"
+								},
+								{
+									"key": "airlineUUID",
+									"value": "5b7222f1-1fdb-46f3-b53b-2c3f740d1b2c",
+									"type": "text"
+								},
+								{
+									"key": "gruendungsdatum",
+									"value": "2021",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/airline/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"airline",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline: update Test unknown",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.name).to.eql(\"Swiss 3.0\");\r",
+									"    pm.expect(responseJson.gruendungsdatum).to.eql(\"2025\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/airline/check?airlineUUID=5b7222f1-1fdb-46f3-b53b-2c3f740d1b2c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"airline",
+								"check"
+							],
+							"query": [
+								{
+									"key": "airlineUUID",
+									"value": "5b7222f1-1fdb-46f3-b53b-2c3f740d1b2c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline: remove",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/airline/delete?airlineUUID=277df517-2775-4b2e-bed1-3db89014fcfc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"airline",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "airlineUUID",
+									"value": "277df517-2775-4b2e-bed1-3db89014fcfc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline: remove Test",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson).to.eql(null);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/airline/check?airlineUUID=277df517-2775-4b2e-bed1-3db89014fcfc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"airline",
+								"check"
+							],
+							"query": [
+								{
+									"key": "airlineUUID",
+									"value": "277df517-2775-4b2e-bed1-3db89014fcfc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline: remove unknown",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/airline/delete?airlineUUID=3d8a42a7-8255-49be-be79-17c4a531fb10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"airline",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "airlineUUID",
+									"value": "3d8a42a7-8255-49be-be79-17c4a531fb10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hersteller: insert",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Bombardier",
+									"type": "text"
+								},
+								{
+									"key": "herstellerUUID",
+									"value": "a4b72b72-edb3-4411-ad58-fbc891c2dce8",
+									"type": "text"
+								},
+								{
+									"key": "gruendungsdatum",
+									"value": "1942",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/hersteller/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"hersteller",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hersteller: insert Test",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.name).to.eql(\"Bombardier\");\r",
+									"    pm.expect(responseJson.gruendungsdatum).to.eql(\"1942\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/hersteller/check?herstellerUUID=a4b72b72-edb3-4411-ad58-fbc891c2dce8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"hersteller",
+								"check"
+							],
+							"query": [
+								{
+									"key": "herstellerUUID",
+									"value": "a4b72b72-edb3-4411-ad58-fbc891c2dce8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hersteller: update komplett",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "alteHerstellerUUID",
+									"value": "914312a7-c0d7-42c2-905b-7dd8332cf6c9",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Boeing 2.0",
+									"type": "text"
+								},
+								{
+									"key": "herstellerUUID",
+									"value": "c7e8c9ea-637a-476f-832f-8d57abe7c4a4",
+									"type": "text"
+								},
+								{
+									"key": "gruendungsdatum",
+									"value": "2021",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/hersteller/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"hersteller",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hersteller: update Test komplett",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.name).to.eql(\"Boeing 2.0\");\r",
+									"    pm.expect(responseJson.gruendungsdatum).to.eql(\"2021\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/hersteller/check?herstellerUUID=c7e8c9ea-637a-476f-832f-8d57abe7c4a4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"hersteller",
+								"check"
+							],
+							"query": [
+								{
+									"key": "herstellerUUID",
+									"value": "c7e8c9ea-637a-476f-832f-8d57abe7c4a4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hersteller: update partiel",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "alteHerstellerUUID",
+									"value": "c7e8c9ea-637a-476f-832f-8d57abe7c4a4",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Boeing 3.0",
+									"type": "text"
+								},
+								{
+									"key": "gruendungsdatum",
+									"value": "2025",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/hersteller/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"hersteller",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hersteller: update Test partiel",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.name).to.eql(\"Boeing 3.0\");\r",
+									"    pm.expect(responseJson.gruendungsdatum).to.eql(\"2025\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/hersteller/check?herstellerUUID=c7e8c9ea-637a-476f-832f-8d57abe7c4a4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"hersteller",
+								"check"
+							],
+							"query": [
+								{
+									"key": "herstellerUUID",
+									"value": "c7e8c9ea-637a-476f-832f-8d57abe7c4a4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hersteller: update unknown",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "alteHerstellerUUID",
+									"value": "6ce7cdc0-46a0-40d9-878c-dab61ce64757",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Boeing 2.0",
+									"type": "text"
+								},
+								{
+									"key": "herstellerUUID",
+									"value": "c7e8c9ea-637a-476f-832f-8d57abe7c4a4",
+									"type": "text"
+								},
+								{
+									"key": "gruendungsdatum",
+									"value": "2021",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/hersteller/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"hersteller",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hersteller: update Test unknown",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.name).to.eql(\"Boeing 3.0\");\r",
+									"    pm.expect(responseJson.gruendungsdatum).to.eql(\"2025\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/hersteller/check?herstellerUUID=c7e8c9ea-637a-476f-832f-8d57abe7c4a4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"hersteller",
+								"check"
+							],
+							"query": [
+								{
+									"key": "herstellerUUID",
+									"value": "c7e8c9ea-637a-476f-832f-8d57abe7c4a4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hersteller: remove",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/hersteller/delete?herstellerUUID=a4b72b72-edb3-4411-ad58-fbc891c2dce8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"hersteller",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "herstellerUUID",
+									"value": "a4b72b72-edb3-4411-ad58-fbc891c2dce8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hersteller: remove Test",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"validate response\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson).to.eql(null);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/hersteller/check?herstellerUUID=a4b72b72-edb3-4411-ad58-fbc891c2dce8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"hersteller",
+								"check"
+							],
+							"query": [
+								{
+									"key": "herstellerUUID",
+									"value": "a4b72b72-edb3-4411-ad58-fbc891c2dce8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hersteller: remove unknown",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/hersteller/delete?herstellerUUID=c4b3b57a-044a-46ce-b270-b9edba3429fc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"hersteller",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "herstellerUUID",
+									"value": "c4b3b57a-044a-46ce-b270-b9edba3429fc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/test/restore",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"test",
+								"restore"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Milestone 3",
+			"item": [
+				{
+					"name": "Benutzer: login admin Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "benutzername",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "passwort",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"benutzer",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/test/restore",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"test",
+								"restore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Benutzer: logoff Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/logoff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"benutzer",
+								"logoff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Benutzer: login unknown",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "benutzername",
+									"value": "inexistenterBenutzer",
+									"type": "text"
+								},
+								{
+									"key": "passwort",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"benutzer",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Benutzer: login falsches Passwort",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "benutzername",
+									"value": "benutzer",
+									"type": "text"
+								},
+								{
+									"key": "passwort",
+									"value": "einTollesPasswort",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"benutzer",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Benutzer: login benutzer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "benutzername",
+									"value": "benutzer",
+									"type": "text"
+								},
+								{
+									"key": "passwort",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"benutzer",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: update ohne Berechtigung",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "alteKartenUUID",
+									"value": "4efd4ee9-1e3e-47cc-a919-93194c5137cd",
+									"type": "text"
+								},
+								{
+									"key": "neueHerstellerUUID",
+									"value": "1a8b4702-59d8-4a22-927a-0d1c9713bba1",
+									"type": "text"
+								},
+								{
+									"key": "Kartentyp",
+									"value": "A350-1000",
+									"type": "text"
+								},
+								{
+									"key": "KartenUUID",
+									"value": "b1e14e73-13e7-4f23-8db1-2e1e11873e54",
+									"type": "text"
+								},
+								{
+									"key": "herstellungsdatum",
+									"value": "2017",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: insert ohne Berechtigung",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "herstellerUUID",
+									"value": "1a8b4702-59d8-4a22-927a-0d1c9713bba1",
+									"type": "text"
+								},
+								{
+									"key": "airlineUUID",
+									"value": "1bf5dca5-4f25-4225-aff8-c7b5de868ea1",
+									"type": "text"
+								},
+								{
+									"key": "Kartentyp",
+									"value": "A220-300",
+									"type": "text"
+								},
+								{
+									"key": "KartenUUID",
+									"value": "e8ecf099-81ac-48b3-8919-f842f8790537",
+									"type": "text"
+								},
+								{
+									"key": "herstellungsdatum",
+									"value": "2018",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: remove ohne Berechtigung",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/delete?KartenUUID=c3effae4-81e2-4a94-b8f3-48f43c998630",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "KartenUUID",
+									"value": "c3effae4-81e2-4a94-b8f3-48f43c998630"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Benutzer: login wartung",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "benutzername",
+									"value": "wartung",
+									"type": "text"
+								},
+								{
+									"key": "passwort",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"benutzer",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "alteKartenUUID",
+									"value": "4efd4ee9-1e3e-47cc-a919-93194c5137cd",
+									"type": "text"
+								},
+								{
+									"key": "neueHerstellerUUID",
+									"value": "1a8b4702-59d8-4a22-927a-0d1c9713bba1",
+									"type": "text"
+								},
+								{
+									"key": "Kartentyp",
+									"value": "A350-1000",
+									"type": "text"
+								},
+								{
+									"key": "KartenUUID",
+									"value": "b1e14e73-13e7-4f23-8db1-2e1e11873e54",
+									"type": "text"
+								},
+								{
+									"key": "herstellungsdatum",
+									"value": "2017",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: insert ohne Berechtigung",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "herstellerUUID",
+									"value": "1a8b4702-59d8-4a22-927a-0d1c9713bba1",
+									"type": "text"
+								},
+								{
+									"key": "airlineUUID",
+									"value": "1bf5dca5-4f25-4225-aff8-c7b5de868ea1",
+									"type": "text"
+								},
+								{
+									"key": "Kartentyp",
+									"value": "A220-300",
+									"type": "text"
+								},
+								{
+									"key": "KartenUUID",
+									"value": "e8ecf099-81ac-48b3-8919-f842f8790537",
+									"type": "text"
+								},
+								{
+									"key": "herstellungsdatum",
+									"value": "2018",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: remove ohne Berechtigung",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/delete?KartenUUID=c3effae4-81e2-4a94-b8f3-48f43c998630",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "KartenUUID",
+									"value": "c3effae4-81e2-4a94-b8f3-48f43c998630"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Benutzer: login admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "benutzername",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "passwort",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"benutzer",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "alteKartenUUID",
+									"value": "b1e14e73-13e7-4f23-8db1-2e1e11873e54",
+									"type": "text"
+								},
+								{
+									"key": "neueHerstellerUUID",
+									"value": "914312a7-c0d7-42c2-905b-7dd8332cf6c9",
+									"type": "text"
+								},
+								{
+									"key": "Kartentyp",
+									"value": "777-300ER",
+									"type": "text"
+								},
+								{
+									"key": "KartenUUID",
+									"value": "4efd4ee9-1e3e-47cc-a919-93194c5137cd",
+									"type": "text"
+								},
+								{
+									"key": "herstellungsdatum",
+									"value": "2017",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: insert",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "herstellerUUID",
+									"value": "1a8b4702-59d8-4a22-927a-0d1c9713bba1",
+									"type": "text"
+								},
+								{
+									"key": "airlineUUID",
+									"value": "1bf5dca5-4f25-4225-aff8-c7b5de868ea1",
+									"type": "text"
+								},
+								{
+									"key": "Kartentyp",
+									"value": "A220-300",
+									"type": "text"
+								},
+								{
+									"key": "KartenUUID",
+									"value": "e8ecf099-81ac-48b3-8919-f842f8790537",
+									"type": "text"
+								},
+								{
+									"key": "herstellungsdatum",
+									"value": "2018",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: remove",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/delete?KartenUUID=e8ecf099-81ac-48b3-8919-f842f8790537",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "KartenUUID",
+									"value": "e8ecf099-81ac-48b3-8919-f842f8790537"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/test/restore",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"test",
+								"restore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Benutzer: logoff",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/logoff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"benutzer",
+								"logoff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Karten: list ohne Berechtigung",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"KartenDeck-1.0-SNAPSHOT",
+								"deck",
+								"Karten",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

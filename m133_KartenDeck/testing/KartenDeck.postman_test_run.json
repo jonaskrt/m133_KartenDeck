@@ -1,0 +1,2406 @@
+{
+	"id": "2ff83c9f-089d-458b-bbf5-0ce54b7e5bbc",
+	"name": "KartenDeck",
+	"timestamp": "2021-07-03T19:40:36.406Z",
+	"collection_id": "6bc7ee6c-f7d6-4bf7-b0a0-1ee909ae3b9b",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 98,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "1f8b8e17-9c7c-4941-8e12-64e2356eb137",
+			"name": "Benutzer: login admin Copy",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/login",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "0fca110d-00f6-464a-adab-c71fb18924ed",
+			"name": "Restore Copy",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/test/restore",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "36ec06df-9f33-4d55-8033-b270a4295deb",
+			"name": "Test",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/test/test",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "c7153ec7-b1e6-4add-8013-d09df9961a1c",
+			"name": "Test valides JSON",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/testliste",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "8538c2cb-3ab7-4dbf-bb54-8fba4751e4be",
+			"name": "Karten: list",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/list",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "94ed30dd-f51c-4926-9c0c-8b1edc3d40cf",
+			"name": "Karten: check",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/check?KartenUUID=4efd4ee9-1e3e-47cc-a919-93194c5137cd",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "6c37870a-3765-4c34-afc5-573f066456ee",
+			"name": "Karten: check empty",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/check?KartenUUID=a1c0bb34-7f7f-41a3-8960-04487f696bc2",
+			"time": 7,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "7285397f-d0e5-46ca-a00f-ede4f58f5b1f",
+			"name": "Karten: check invalid",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/check?KartenUUID=a1c0bb34-7f7f-41a3-04487f696bc2",
+			"time": 6,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "2f991121-713e-446c-9a48-424284bc1904",
+			"name": "ability: list",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/ability/list",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "bfd501cb-fcf4-4d86-ae78-c5a992c3457a",
+			"name": "ability: check",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/ability/check?abilityUUID=1bf5dca5-4f25-4225-aff8-c7b5de868ea1",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "82595147-43b2-47e6-bea4-466f6dca4812",
+			"name": "ability: check empty",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/ability/check?abilityUUID=364cce64-2fc7-4b10-8094-fdc10f45eda8",
+			"time": 13,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "a8e018c1-95b2-4a88-b755-da07945a1273",
+			"name": "ability: check invalid",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/ability/check?abilityUUID=364cce64-2fc7-8094-fdc10f45eda8",
+			"time": 8,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "36dfd4ab-0f48-4c3e-a3e4-9a39aa1f6d5f",
+			"name": "stats: list",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/stats/list",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "d15bd330-6452-4fab-b68a-5f6ba1a8dad8",
+			"name": "stats: check",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/stats/check?statsUUID=1a8b4702-59d8-4a22-927a-0d1c9713bba1",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "73525599-2037-4ead-9507-48805f027ff0",
+			"name": "stats: check empty",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/stats/check?statsUUID=ed79fa21-4a43-4b85-ba58-18a1e74af0df",
+			"time": 6,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "e61cf60a-7e0f-4f22-84a5-e5b825765c53",
+			"name": "stats: check invalid",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/stats/check?statsUUID=ed79-fa21-4a43-4b85-ba58-18a1e74af0df",
+			"time": 6,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "81d425cc-86f5-4446-8cd7-bfe8fb8adefe",
+			"name": "Karten: insert",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/insert",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "98de00d5-b487-477a-841d-9de0cc4d7e98",
+			"name": "Karten: insert Test",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/check?KartenUUID=e8ecf099-81ac-48b3-8919-f842f8790537",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "0b284d66-4205-4780-941a-50165e97a9da",
+			"name": "Karten: update komplett",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/update",
+			"time": 17,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "364fca4c-2792-403b-9e65-3aaced8746a4",
+			"name": "Karten: update Test komplett",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/check?KartenUUID=b1e14e73-13e7-4f23-8db1-2e1e11873e54",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "90aa44d1-a3b3-4e0d-ae70-fea44308baf3",
+			"name": "Karten: update partiel",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/update",
+			"time": 17,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "63d0c1b7-73bf-4afe-a2a3-c9b63d1e1936",
+			"name": "Karten: update Test partiel",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/check?KartenUUID=b1e14e73-13e7-4f23-8db1-2e1e11873e54",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "7e954868-cd28-49c1-903d-36e8a3f9e201",
+			"name": "Karten: update unknown",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/update",
+			"time": 8,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "741cd714-e264-41b0-883f-693f2f0daf12",
+			"name": "Karten: update Test unknown",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/check?KartenUUID=b1e14e73-13e7-4f23-8db1-2e1e11873e54",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "5d55f09a-dd0b-4adf-900e-039e19926c17",
+			"name": "Karten: remove",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/delete?KartenUUID=c3effae4-81e2-4a94-b8f3-48f43c998630",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "05aae254-6d44-4a8d-b24d-ff96f6086f30",
+			"name": "Karten: remove Test",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/check?KartenUUID=c3effae4-81e2-4a94-b8f3-48f43c998630",
+			"time": 10,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "0da7bc9f-5081-4eb2-8093-f3c49580af91",
+			"name": "Karten: remove unknown",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/delete?KartenUUID=2799810d-34ff-44d1-a57f-4289853c0555",
+			"time": 6,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "9807311b-14a6-4d78-8762-a47430575500",
+			"name": "ability: insert",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/ability/insert",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "f954cc45-ab5d-49b4-b3df-6ac307f0f7a7",
+			"name": "ability: update komplett",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/ability/update",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "2635b40a-bcce-48dd-a2af-603f81942246",
+			"name": "ability: update Test komplett",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/ability/check?abilityUUID=5b7222f1-1fdb-46f3-b53b-2c3f740d1b2c",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "fda10199-d6e6-4753-918b-129bd7822a9e",
+			"name": "ability: update partiel",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/ability/update",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "a7ef1f9d-d02d-4299-b555-bd1785ffbafc",
+			"name": "ability: update Test partiel",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/ability/check?abilityUUID=5b7222f1-1fdb-46f3-b53b-2c3f740d1b2c",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "f8a69a71-213e-437d-94e0-72bed0349c3e",
+			"name": "ability: update unknown",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/ability/update",
+			"time": 7,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "137680fe-c89b-4e1e-ba99-502d82d46cf3",
+			"name": "ability: update Test unknown",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/ability/check?abilityUUID=5b7222f1-1fdb-46f3-b53b-2c3f740d1b2c",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "d1f20455-af2a-4636-9815-4cd63b7f77f2",
+			"name": "ability: remove",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/ability/delete?abilityUUID=277df517-2775-4b2e-bed1-3db89014fcfc",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "f7c2bdf0-00a0-4bb8-95a4-4779708c083e",
+			"name": "ability: remove Test",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/ability/check?abilityUUID=277df517-2775-4b2e-bed1-3db89014fcfc",
+			"time": 11,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "038b66be-bc48-4087-92b4-a0f68df9a05a",
+			"name": "ability: remove unknown",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/ability/delete?abilityUUID=3d8a42a7-8255-49be-be79-17c4a531fb10",
+			"time": 10,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "5506c0ed-fc1e-4551-b179-dffd21ac86aa",
+			"name": "stats: insert",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/stats/insert",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "4835341a-59a6-4cad-b6d1-b0215e172ced",
+			"name": "stats: insert Test",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/stats/check?statsUUID=a4b72b72-edb3-4411-ad58-fbc891c2dce8",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "0558609e-d3bd-4b86-b3de-d0393f76d039",
+			"name": "stats: update komplett",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/stats/update",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "ca2b8a05-8845-4233-b064-9f4045ab4c46",
+			"name": "stats: update Test komplett",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/stats/check?statsUUID=c7e8c9ea-637a-476f-832f-8d57abe7c4a4",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "671056d1-40aa-4da4-9043-a1e9a00bc4e9",
+			"name": "stats: update partiel",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/stats/update",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "6919eb04-ac65-40e3-b260-f6dade4e7a8d",
+			"name": "stats: update Test partiel",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/stats/check?statsUUID=c7e8c9ea-637a-476f-832f-8d57abe7c4a4",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "6e9859bf-67f2-4ea8-b4c6-863001ae6fa8",
+			"name": "stats: update unknown",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/stats/update",
+			"time": 6,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "e7628d79-88ea-49bf-8ee4-1448d46119b6",
+			"name": "stats: update Test unknown",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/stats/check?statsUUID=c7e8c9ea-637a-476f-832f-8d57abe7c4a4",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "7b2a7f70-7ad4-4fb6-a5a5-f26b81522c5f",
+			"name": "stats: remove",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/stats/delete?statsUUID=a4b72b72-edb3-4411-ad58-fbc891c2dce8",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "59c8fd4d-6166-4cf4-943e-56812bc25978",
+			"name": "stats: remove Test",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/stats/check?statsUUID=a4b72b72-edb3-4411-ad58-fbc891c2dce8",
+			"time": 10,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "a4f02ce7-74ee-4708-8c2c-ba1e48242d53",
+			"name": "stats: remove unknown",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/stats/delete?statsUUID=c4b3b57a-044a-46ce-b270-b9edba3429fc",
+			"time": 6,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "45847f71-bc0b-4cbf-97f0-296b0516a4ef",
+			"name": "Restore",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/test/restore",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "553ebea0-1b67-47f4-ac9a-0f62ea42b405",
+			"name": "Benutzer: login admin Copy",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/login",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "3cc03073-dfbb-4d79-bc98-e16763c0d7ce",
+			"name": "Restore Copy",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/test/restore",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "b1977b9d-2a3e-49d4-a86d-958ac4c5551e",
+			"name": "Benutzer: logoff Copy",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/logoff",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "7e5e355d-d3ae-441e-9be7-8b32079cd579",
+			"name": "Benutzer: login unknown",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/login",
+			"time": 5,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "4793149b-23a7-4c3d-af7c-6264489f35d0",
+			"name": "Benutzer: login falsches Passwort",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/login",
+			"time": 6,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "aaa1f210-45a5-4cac-9449-cf7db4b62368",
+			"name": "Benutzer: login benutzer",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/login",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "88fb3d22-eb83-4606-af35-53def8067448",
+			"name": "Karten: list",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/list",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "0c08f8b1-1e1d-43f6-b679-a119f12b553f",
+			"name": "Karten: update ohne Berechtigung",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/update",
+			"time": 14,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "8b37ca0b-5dcd-4283-bbb9-e5200c497182",
+			"name": "Karten: insert ohne Berechtigung",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/insert",
+			"time": 8,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "10ac2c99-331a-460b-b8c9-20873872386a",
+			"name": "Karten: remove ohne Berechtigung",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/delete?KartenUUID=c3effae4-81e2-4a94-b8f3-48f43c998630",
+			"time": 5,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "836d47aa-bccf-436b-9ecf-a9fd86c6b39a",
+			"name": "Benutzer: login wartung",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/login",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "4c77bec8-587b-46f8-90b1-30e56d11f32b",
+			"name": "Karten: list",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/list",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "95eb0903-e0d5-4886-8b67-04e55659e050",
+			"name": "Karten: update",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/update",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "850abdfe-ff99-4909-894a-464bf493ad50",
+			"name": "Karten: insert ohne Berechtigung",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/insert",
+			"time": 7,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "ddc90f81-de7d-4785-8679-294a58ee451a",
+			"name": "Karten: remove ohne Berechtigung",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/delete?KartenUUID=c3effae4-81e2-4a94-b8f3-48f43c998630",
+			"time": 11,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "94e18a8c-4f5c-4bf4-8bf3-64ab7ca15f29",
+			"name": "Benutzer: login admin",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/login",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "60329d10-369f-4b46-a853-c9ea04941258",
+			"name": "Karten: list",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/list",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "99187844-eab4-497a-8de5-9f1adc1f2c88",
+			"name": "Karten: update",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/update",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "7a2e4b61-6bb4-4448-8056-bc4debc778fd",
+			"name": "Karten: insert",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/insert",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "554816c2-f75a-4f57-afa2-46e8f783cb05",
+			"name": "Karten: remove",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/delete?KartenUUID=e8ecf099-81ac-48b3-8919-f842f8790537",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "abd4fd62-8f37-4d96-8437-04d48208a75e",
+			"name": "Restore Copy",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/test/restore",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "3525718b-160a-48c2-8792-fd960af7879e",
+			"name": "Benutzer: logoff",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/benutzer/logoff",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "6d58467e-5e89-48b2-a221-e743e7df8f1e",
+			"name": "Karten: list ohne Berechtigung",
+			"url": "http://localhost:8080/KartenDeck-1.0-SNAPSHOT/deck/Karten/list",
+			"time": 5,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 618,
+	"collection": {
+		"requests": [
+			{
+				"id": "1f8b8e17-9c7c-4941-8e12-64e2356eb137",
+				"method": "POST"
+			},
+			{
+				"id": "0fca110d-00f6-464a-adab-c71fb18924ed",
+				"method": "GET"
+			},
+			{
+				"id": "36ec06df-9f33-4d55-8033-b270a4295deb",
+				"method": "GET"
+			},
+			{
+				"id": "c7153ec7-b1e6-4add-8013-d09df9961a1c",
+				"method": "GET"
+			},
+			{
+				"id": "8538c2cb-3ab7-4dbf-bb54-8fba4751e4be",
+				"method": "GET"
+			},
+			{
+				"id": "94ed30dd-f51c-4926-9c0c-8b1edc3d40cf",
+				"method": "GET"
+			},
+			{
+				"id": "6c37870a-3765-4c34-afc5-573f066456ee",
+				"method": "GET"
+			},
+			{
+				"id": "7285397f-d0e5-46ca-a00f-ede4f58f5b1f",
+				"method": "GET"
+			},
+			{
+				"id": "2f991121-713e-446c-9a48-424284bc1904",
+				"method": "GET"
+			},
+			{
+				"id": "bfd501cb-fcf4-4d86-ae78-c5a992c3457a",
+				"method": "GET"
+			},
+			{
+				"id": "82595147-43b2-47e6-bea4-466f6dca4812",
+				"method": "GET"
+			},
+			{
+				"id": "a8e018c1-95b2-4a88-b755-da07945a1273",
+				"method": "GET"
+			},
+			{
+				"id": "36dfd4ab-0f48-4c3e-a3e4-9a39aa1f6d5f",
+				"method": "GET"
+			},
+			{
+				"id": "d15bd330-6452-4fab-b68a-5f6ba1a8dad8",
+				"method": "GET"
+			},
+			{
+				"id": "73525599-2037-4ead-9507-48805f027ff0",
+				"method": "GET"
+			},
+			{
+				"id": "e61cf60a-7e0f-4f22-84a5-e5b825765c53",
+				"method": "GET"
+			},
+			{
+				"id": "81d425cc-86f5-4446-8cd7-bfe8fb8adefe",
+				"method": "POST"
+			},
+			{
+				"id": "98de00d5-b487-477a-841d-9de0cc4d7e98",
+				"method": "GET"
+			},
+			{
+				"id": "0b284d66-4205-4780-941a-50165e97a9da",
+				"method": "PUT"
+			},
+			{
+				"id": "364fca4c-2792-403b-9e65-3aaced8746a4",
+				"method": "GET"
+			},
+			{
+				"id": "90aa44d1-a3b3-4e0d-ae70-fea44308baf3",
+				"method": "PUT"
+			},
+			{
+				"id": "63d0c1b7-73bf-4afe-a2a3-c9b63d1e1936",
+				"method": "GET"
+			},
+			{
+				"id": "7e954868-cd28-49c1-903d-36e8a3f9e201",
+				"method": "PUT"
+			},
+			{
+				"id": "741cd714-e264-41b0-883f-693f2f0daf12",
+				"method": "GET"
+			},
+			{
+				"id": "5d55f09a-dd0b-4adf-900e-039e19926c17",
+				"method": "DELETE"
+			},
+			{
+				"id": "05aae254-6d44-4a8d-b24d-ff96f6086f30",
+				"method": "GET"
+			},
+			{
+				"id": "0da7bc9f-5081-4eb2-8093-f3c49580af91",
+				"method": "DELETE"
+			},
+			{
+				"id": "9807311b-14a6-4d78-8762-a47430575500",
+				"method": "POST"
+			},
+			{
+				"id": "f954cc45-ab5d-49b4-b3df-6ac307f0f7a7",
+				"method": "PUT"
+			},
+			{
+				"id": "2635b40a-bcce-48dd-a2af-603f81942246",
+				"method": "GET"
+			},
+			{
+				"id": "fda10199-d6e6-4753-918b-129bd7822a9e",
+				"method": "PUT"
+			},
+			{
+				"id": "a7ef1f9d-d02d-4299-b555-bd1785ffbafc",
+				"method": "GET"
+			},
+			{
+				"id": "f8a69a71-213e-437d-94e0-72bed0349c3e",
+				"method": "PUT"
+			},
+			{
+				"id": "137680fe-c89b-4e1e-ba99-502d82d46cf3",
+				"method": "GET"
+			},
+			{
+				"id": "d1f20455-af2a-4636-9815-4cd63b7f77f2",
+				"method": "DELETE"
+			},
+			{
+				"id": "f7c2bdf0-00a0-4bb8-95a4-4779708c083e",
+				"method": "GET"
+			},
+			{
+				"id": "038b66be-bc48-4087-92b4-a0f68df9a05a",
+				"method": "DELETE"
+			},
+			{
+				"id": "5506c0ed-fc1e-4551-b179-dffd21ac86aa",
+				"method": "POST"
+			},
+			{
+				"id": "4835341a-59a6-4cad-b6d1-b0215e172ced",
+				"method": "GET"
+			},
+			{
+				"id": "0558609e-d3bd-4b86-b3de-d0393f76d039",
+				"method": "PUT"
+			},
+			{
+				"id": "ca2b8a05-8845-4233-b064-9f4045ab4c46",
+				"method": "GET"
+			},
+			{
+				"id": "671056d1-40aa-4da4-9043-a1e9a00bc4e9",
+				"method": "PUT"
+			},
+			{
+				"id": "6919eb04-ac65-40e3-b260-f6dade4e7a8d",
+				"method": "GET"
+			},
+			{
+				"id": "6e9859bf-67f2-4ea8-b4c6-863001ae6fa8",
+				"method": "PUT"
+			},
+			{
+				"id": "e7628d79-88ea-49bf-8ee4-1448d46119b6",
+				"method": "GET"
+			},
+			{
+				"id": "7b2a7f70-7ad4-4fb6-a5a5-f26b81522c5f",
+				"method": "DELETE"
+			},
+			{
+				"id": "59c8fd4d-6166-4cf4-943e-56812bc25978",
+				"method": "GET"
+			},
+			{
+				"id": "a4f02ce7-74ee-4708-8c2c-ba1e48242d53",
+				"method": "DELETE"
+			},
+			{
+				"id": "45847f71-bc0b-4cbf-97f0-296b0516a4ef",
+				"method": "GET"
+			},
+			{
+				"id": "553ebea0-1b67-47f4-ac9a-0f62ea42b405",
+				"method": "POST"
+			},
+			{
+				"id": "3cc03073-dfbb-4d79-bc98-e16763c0d7ce",
+				"method": "GET"
+			},
+			{
+				"id": "b1977b9d-2a3e-49d4-a86d-958ac4c5551e",
+				"method": "DELETE"
+			},
+			{
+				"id": "7e5e355d-d3ae-441e-9be7-8b32079cd579",
+				"method": "POST"
+			},
+			{
+				"id": "4793149b-23a7-4c3d-af7c-6264489f35d0",
+				"method": "POST"
+			},
+			{
+				"id": "aaa1f210-45a5-4cac-9449-cf7db4b62368",
+				"method": "POST"
+			},
+			{
+				"id": "88fb3d22-eb83-4606-af35-53def8067448",
+				"method": "GET"
+			},
+			{
+				"id": "0c08f8b1-1e1d-43f6-b679-a119f12b553f",
+				"method": "PUT"
+			},
+			{
+				"id": "8b37ca0b-5dcd-4283-bbb9-e5200c497182",
+				"method": "POST"
+			},
+			{
+				"id": "10ac2c99-331a-460b-b8c9-20873872386a",
+				"method": "DELETE"
+			},
+			{
+				"id": "836d47aa-bccf-436b-9ecf-a9fd86c6b39a",
+				"method": "POST"
+			},
+			{
+				"id": "4c77bec8-587b-46f8-90b1-30e56d11f32b",
+				"method": "GET"
+			},
+			{
+				"id": "95eb0903-e0d5-4886-8b67-04e55659e050",
+				"method": "PUT"
+			},
+			{
+				"id": "850abdfe-ff99-4909-894a-464bf493ad50",
+				"method": "POST"
+			},
+			{
+				"id": "ddc90f81-de7d-4785-8679-294a58ee451a",
+				"method": "DELETE"
+			},
+			{
+				"id": "94e18a8c-4f5c-4bf4-8bf3-64ab7ca15f29",
+				"method": "POST"
+			},
+			{
+				"id": "60329d10-369f-4b46-a853-c9ea04941258",
+				"method": "GET"
+			},
+			{
+				"id": "99187844-eab4-497a-8de5-9f1adc1f2c88",
+				"method": "PUT"
+			},
+			{
+				"id": "7a2e4b61-6bb4-4448-8056-bc4debc778fd",
+				"method": "POST"
+			},
+			{
+				"id": "554816c2-f75a-4f57-afa2-46e8f783cb05",
+				"method": "DELETE"
+			},
+			{
+				"id": "abd4fd62-8f37-4d96-8437-04d48208a75e",
+				"method": "GET"
+			},
+			{
+				"id": "3525718b-160a-48c2-8792-fd960af7879e",
+				"method": "DELETE"
+			},
+			{
+				"id": "6d58467e-5e89-48b2-a221-e743e7df8f1e",
+				"method": "GET"
+			}
+		]
+	}
+}
