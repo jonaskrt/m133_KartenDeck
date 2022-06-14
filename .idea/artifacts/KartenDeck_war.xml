@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="KartenDeck:war">
+    <output-path>$PROJECT_DIR$/m133_KartenDeck/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>KartenDeck</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="KartenDeck-1.war">
+      <element id="artifact" artifact-name="KartenDeck:war exploded" />
+    </root>
+  </artifact>
+</component>
