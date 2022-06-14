@@ -186,7 +186,7 @@ public class Card {
      *
      * @return value of deck
      */
-    public Deck getDeck() {
+    public static Deck getDeck() {
         return deck;
     }
 
@@ -195,7 +195,7 @@ public class Card {
      *
      * @param deck the value to set
      */
-    public void setDeck(Deck deck) {
+    public static void setDeck(Deck deck) {
         this.deck = deck;
     }
 
@@ -204,7 +204,7 @@ public class Card {
      *
      * @return value of cardUUID
      */
-    public String getCardUUID() {
+    public static String getCardUUID() {
         return cardUUID;
     }
 
@@ -213,7 +213,7 @@ public class Card {
      *
      * @param cardUUID the value to set
      */
-    public void setCardUUID(String cardUUID) throws IllegalArgumentException {
+    public static void setCardUUID(String cardUUID) throws IllegalArgumentException {
         this.cardUUID = UUID.randomUUID().toString();
         UUID.fromString(cardUUID);
         this.cardUUID = cardUUID;

@@ -83,7 +83,7 @@ public class Deck {
      *
      * @param deck the value to set
      */
-    public void setDeck(String deck) {
+    public void setDeck(Deck deck) {
         this.deck = deck;
     }
 

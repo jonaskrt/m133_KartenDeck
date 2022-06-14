@@ -90,7 +90,7 @@ public class DataHandler {
      *
      * @return value of cardList
      */
-    private static HashMap<String, Card> getCardList() {
+    public static HashMap<String, Card> getCardList() {
         return cardList;
     }
 
@@ -108,7 +108,7 @@ public class DataHandler {
      *
      * @return value of publisherList
      */
-    private static HashMap<String, Deck> getDeckList() {
+    public static HashMap<String, Deck> getDeckList() {
         return deckList;
     }
 
