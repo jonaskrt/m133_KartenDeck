@@ -23,13 +23,13 @@ public class TestService {
             @CookieParam("token") String token
     ) {
         int status;
-        String returnValue = "Nicht autorisiert";
+        String returnValue = "not authorised";
 
-        String[] rollen = {"admin", "wartung"};
-        status = (token, "admin");
+        String[] roles = {"admin", "maintenance"};
+        status = CheckCookie.checkCookie(token, "admin");
 
         if (status == 200){
-            returnValue = "hurrah! Der Test hat funktioniert";
+            returnValue = "It worked";
         }
 
         Response response = Response
@@ -46,13 +46,13 @@ public class TestService {
             @CookieParam("token") String token
     ){
         int status;
-        String returnValue = "Nicht autorisiert";
+        String returnValue = "not authorised";
 
         status = CheckCookie.checkCookie(token, "admin");
 
         if (status == 200){
             DataHandler.restoreData();
-            returnValue = "Die Daten wurden zurueckgesetzt";
+            returnValue = "Data reset";
         }
 
         Response response = Response

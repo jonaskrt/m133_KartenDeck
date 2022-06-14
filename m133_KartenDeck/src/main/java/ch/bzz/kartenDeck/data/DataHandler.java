@@ -14,7 +14,7 @@ import java.util.*;
  * reads and writes the data in the JSON-files
  */
 public class DataHandler {
-    private static final DataHandler instance = new DataHandler();
+    private static DataHandler instance = new DataHandler();
     private static HashMap<String, Card> cardList;
     private static HashMap<String, Deck> deckList;
 
@@ -23,7 +23,7 @@ public class DataHandler {
      */
     private DataHandler() {
         deckList = new HashMap<>();
-        readDeckJSON();
+        readDeckJSON("KartenDeckJSON");
         cardList = new HashMap<>();
         readCardJSON();
     }
@@ -43,30 +43,15 @@ public class DataHandler {
      * reads all cards
      * @return list of cards
      */
-    public List<Card> readAllCards() {
+    public  HashMap<String, Card> readAllCards() {
         return getCardList();
-    }
-
-    /**
-     * reads a card by its uuid
-     * @param cardUUID
-     * @return the card (null=not found)
-     */
-    public Card readCardByUUID(String cardUUID) {
-        Card karte = null;
-        for (Card entry : getCardList()) {
-            if (entry.getCardUUID().equals(cardUUID)) {
-                karte = entry;
-            }
-        }
-        return karte;
     }
 
     /**
      * reads all Decks
      * @return list of decks
      */
-    public List<Deck> readAllDecks() {
+    public HashMap<String, Deck> readAllDecks() {
 
         return getDeckList();
     }
@@ -78,7 +63,7 @@ public class DataHandler {
      */
     public Deck readDeckByUUID(String deckUUID) {
         Deck deck = null;
-        for (Deck entry : getDeckList()) {
+        for (Deck entry : getDeckList().values()) {
             if (entry.getDeckUUID().equals(deckUUID)) {
                 deck = entry;
             }
@@ -86,24 +71,6 @@ public class DataHandler {
         return deck;
     }
 
-    /**
-     * reads the cards from the JSON-file
-     */
-    private void readCardJSON() {
-        try {
-            String path = Config.getProperty("cardJSON");
-            byte[] jsonData = Files.readAllBytes(
-                    Paths.get(path)
-            );
-            ObjectMapper objectMapper = new ObjectMapper();
-            Card[] card = objectMapper.readValue(jsonData, Card[].class);
-            for (Card cards : card) {
-                getCardList().add(cards);
-            }
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
 
     /**
      * Diese Methode setzt die gespeicherten Daten zurück
@@ -116,25 +83,6 @@ public class DataHandler {
     }
 
 
-    /**
-     * reads the publishers from the JSON-file
-     */
-    private void readDeckJSON() {
-        try {
-            byte[] jsonData = Files.readAllBytes(
-                    Paths.get(
-                            Config.getProperty("deckJSON")
-                    )
-            );
-            ObjectMapper objectMapper = new ObjectMapper();
-            Deck[] decks = objectMapper.readValue(jsonData, Deck[].class);
-            for (Deck deck : decks) {
-                getDeckList().add(deck);
-            }
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
 
 
     /**
@@ -142,7 +90,7 @@ public class DataHandler {
      *
      * @return value of cardList
      */
-    private HashMap<String, Card> getCardList() {
+    private static HashMap<String, Card> getCardList() {
         return cardList;
     }
 
@@ -160,7 +108,7 @@ public class DataHandler {
      *
      * @return value of publisherList
      */
-    private HashMap<String, Deck> getDeckList() {
+    private static HashMap<String, Deck> getDeckList() {
         return deckList;
     }
 
@@ -171,6 +119,57 @@ public class DataHandler {
      */
     private void setDeckList(HashMap<String, Deck> deckList) {
         this.deckList = deckList;
+    }
+
+
+    /**
+     * reads a card by its uuid
+     * @param cardUUID
+     * @return the card (null=not found)
+     */
+    public Card readCardByUUID(String cardUUID) {
+        Card karte = null;
+        for (Card entry : getCardList().values()) {
+            if (entry.getCardUUID().equals(cardUUID)) {
+                karte = entry;
+            }
+        }
+        return karte;
+    }
+
+    /**
+     * reads the publishers from the JSON-file
+     */
+    private static void readDeckJSON(String filename) {
+        try {
+            byte[] jsonData = Files.readAllBytes(Paths.get(Config.getProperty(filename)));
+            ObjectMapper objectMapper = new ObjectMapper();
+            Deck[] decks = objectMapper.readValue(jsonData, Deck[].class);
+            for (Deck deck : decks) {
+                getDeckList().put(getDeckList().toString(),deck); // temporary, no idea how this should work
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    /**
+     * reads the cards from the JSON-file
+     */
+    private void readCardJSON() {
+        try {
+            String path = Config.getProperty("cardJSON");
+            byte[] jsonData = Files.readAllBytes(
+                    Paths.get(path)
+            );
+            ObjectMapper objectMapper = new ObjectMapper();
+            Card[] card = objectMapper.readValue(jsonData, Card[].class);
+            for (Card cards : card) {
+                getCardList().put(getCardList().toString(), cards);
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 
 
