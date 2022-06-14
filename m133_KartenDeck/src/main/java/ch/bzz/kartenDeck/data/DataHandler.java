@@ -14,17 +14,17 @@ import java.util.*;
  * reads and writes the data in the JSON-files
  */
 public class DataHandler {
-    private static DataHandler instance = null;
-    private List<Card> cardList;
-    private List<Deck> deckList;
+    private static final DataHandler instance = new DataHandler();
+    private static HashMap<String, Card> cardList;
+    private static HashMap<String, Deck> deckList;
 
     /**
      * private constructor defeats instantiation
      */
     private DataHandler() {
-        setDeckList(new ArrayList<>());
+        deckList = new HashMap<>();
         readDeckJSON();
-        setCardList(new ArrayList<>());
+        cardList = new HashMap<>();
         readCardJSON();
     }
 
@@ -106,6 +106,17 @@ public class DataHandler {
     }
 
     /**
+     * Diese Methode setzt die gespeicherten Daten zurück
+     * Sie wird für das Testing gebraucht
+     */
+    public static void restoreData(){
+        cardList = new HashMap<>();
+        deckList = new HashMap<>();
+        readDeckJSON("KartenDeckJSON");
+    }
+
+
+    /**
      * reads the publishers from the JSON-file
      */
     private void readDeckJSON() {
@@ -124,12 +135,14 @@ public class DataHandler {
             ex.printStackTrace();
         }
     }
+
+
     /**
      * gets cardList
      *
      * @return value of cardList
      */
-    private List<Card> getCardList() {
+    private HashMap<String, Card> getCardList() {
         return cardList;
     }
 
@@ -138,7 +151,7 @@ public class DataHandler {
      *
      * @param cardList the value to set
      */
-    private void setCardList(List<Card> cardList) {
+    private void setCardList(HashMap<String, Card> cardList) {
         this.cardList = cardList;
     }
 
@@ -147,7 +160,7 @@ public class DataHandler {
      *
      * @return value of publisherList
      */
-    private List<Deck> getDeckList() {
+    private HashMap<String, Deck> getDeckList() {
         return deckList;
     }
 
@@ -156,7 +169,7 @@ public class DataHandler {
      *
      * @param deckList the value to set
      */
-    private void setDeckList(List<Deck> deckList) {
+    private void setDeckList(HashMap<String, Deck> deckList) {
         this.deckList = deckList;
     }
 
