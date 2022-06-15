@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Card Editor</title>
+</head>
+<body>
+<form id="cardEditForm" name="cardEditForm">
+    <h3>Edit Card</h3>
+    <div id="message" style="color: red;"></div>
+    <button type="button" id="logoff">Abmelden</button>
+    <table>
+        <tr>
+            <td><label for="name">Name</label></td>
+            <td>
+                <select id="name" name="cardUUID" required>
+                </select>
+                <input id="newCardUUID" name="neueHerstellerUUID" type="hidden" />
+            </td>
+        </tr>
+
+
+        </tr>
+        <tr>
+            <td><label for="cardUUID">deckUUID</label></td>
+            <td>
+                <input id="cardUUID" name="cardUUID" type="pattern"
+                       pattern="[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}"/>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>
+                <button id="save" type="submit">Speichern</button>
+            </td>
+            <td>
+                <button id="reset" type="reset">Zurücksetzen</button>
+            </td>
+            <td>
+                <button id="cancel" type="button">Abbruch</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./js/util.js"></script>
+<script src="./js/cardEdit.js"></script>
+<script src="./js/login.js"></script>
+</body>
+</html>
