@@ -19,11 +19,11 @@ public class Card {
     @JsonIgnore
     @FormParam("deck")
     @Size(min = 1, max = 10, message = "Your Decks name must be between 1 and 10 characters")
-    private Deck deck;
+    private static Deck deck;
 
     @FormParam("cardUUID")
     @Pattern(regexp = "|[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}", message = "The Cards UUID must be a valid UUID")
-    private String cardUUID;
+    private static String cardUUID;
 
     @FormParam("card")
     @Size(min = 1, max = 50, message = "Your Cards name must be between 1 and 50 characters")
@@ -196,7 +196,7 @@ public class Card {
      * @param deck the value to set
      */
     public static void setDeck(Deck deck) {
-        this.deck = deck;
+        deck = deck;
     }
 
     /**
@@ -214,9 +214,9 @@ public class Card {
      * @param cardUUID the value to set
      */
     public static void setCardUUID(String cardUUID) throws IllegalArgumentException {
-        this.cardUUID = UUID.randomUUID().toString();
+        cardUUID = UUID.randomUUID().toString();
         UUID.fromString(cardUUID);
-        this.cardUUID = cardUUID;
+        cardUUID = cardUUID;
     }
 
     /**

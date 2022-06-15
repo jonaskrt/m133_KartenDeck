@@ -36,7 +36,7 @@
 								},
 								{
 									"key": "passwort",
-									"value": "12345",
+									"value": "pw",
 									"type": "text"
 								}
 							]
@@ -2436,7 +2436,7 @@
 			]
 		},
 		{
-			"name": "theres more",
+			"name": "Milestone 3",
 			"item": [
 				{
 					"name": "Benutzer: login admin Copy",
@@ -2460,14 +2460,10 @@
 							"mode": "urlencoded",
 							"urlencoded": [
 								{
-									"key": "benutzername",
-									"value": "admin",
-									"type": "text"
-								},
-								{
-									"key": "passwort",
-									"value": "12345",
-									"type": "text"
+									"userUUID": "666-666-666",
+									"username": "admin",
+									"role" : "admin",
+									"passwort": "pw"
 								}
 							]
 						},
@@ -2582,12 +2578,12 @@
 							"urlencoded": [
 								{
 									"key": "benutzername",
-									"value": "inexistenterBenutzer",
+									"value": "admin",
 									"type": "text"
 								},
 								{
 									"key": "passwort",
-									"value": "12345",
+									"value": "pw",
 									"type": "text"
 								}
 							]
@@ -2637,7 +2633,7 @@
 								},
 								{
 									"key": "passwort",
-									"value": "einTollesPasswort",
+									"value": "pw",
 									"type": "text"
 								}
 							]
@@ -2687,7 +2683,7 @@
 								},
 								{
 									"key": "passwort",
-									"value": "12345",
+									"value": "pw",
 									"type": "text"
 								}
 							]
@@ -2945,7 +2941,7 @@
 								},
 								{
 									"key": "passwort",
-									"value": "12345",
+									"value": "pw",
 									"type": "text"
 								}
 							]
@@ -3203,7 +3199,7 @@
 								},
 								{
 									"key": "passwort",
-									"value": "12345",
+									"value": "pw",
 									"type": "text"
 								}
 							]

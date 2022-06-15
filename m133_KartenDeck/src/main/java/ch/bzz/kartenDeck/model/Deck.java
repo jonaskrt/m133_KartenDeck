@@ -20,7 +20,7 @@ public class Deck {
 
     @FormParam("deck")
     @Size(min = 1, max = 10, message = "Your Decks name must be between 1 and 10 characters")
-    private String deck;
+    private Deck deck;
 
     @JsonIgnore
     private HashMap<String, Deck> deckHashMap;
@@ -31,7 +31,7 @@ public class Deck {
      * @param deck
      * @throws IllegalArgumentException
      */
-    public Deck(String deckUUID, String deck) throws IllegalArgumentException{
+    public Deck(String deckUUID, Deck deck) throws IllegalArgumentException{
         setDeckUUID(deckUUID);
         setDeck(deck);
 
@@ -74,7 +74,7 @@ public class Deck {
      *
      * @return value of deck
      */
-    public String getDeck() {
+    public Deck getDeck() {
         return deck;
     }
 
