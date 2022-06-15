@@ -18,7 +18,7 @@ $(document).ready(function () {
 });
 
 /**
- * Sendet den Login-Request
+ * Login-Request
  * @param form
  */
 function sendLogin(form) {
